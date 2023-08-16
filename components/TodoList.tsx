@@ -1,13 +1,14 @@
-import Todo from './Todo'
+import { Todo as TodoType } from "@prisma/client";
+import Todo from "./Todo";
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos }: { todos: TodoType[] }) => {
   return (
     <div>
       {todos.map((todo) => (
         <Todo key={todo.id} todo={todo} />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default TodoList
+export default TodoList;

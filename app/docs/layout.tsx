@@ -1,4 +1,8 @@
-const DocsLayout = ({ children }) => {
+import { FC, PropsWithChildren } from "react";
+
+type DocsLayoutFC = FC<PropsWithChildren>;
+
+const DocsLayout: DocsLayoutFC = ({ children }) => {
   return (
     <div>
       <div>
@@ -6,7 +10,7 @@ const DocsLayout = ({ children }) => {
         {children}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DocsLayout
+export default DocsLayout;

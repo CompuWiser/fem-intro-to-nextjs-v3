@@ -1,4 +1,4 @@
-import { newTodo } from '@/utils/actions'
+import { newTodo } from "@/utils/actions";
 
 const NewTodoForm = () => {
   return (
@@ -8,7 +8,7 @@ const NewTodoForm = () => {
         <button type="submit">create</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default NewTodoForm
+export default NewTodoForm;

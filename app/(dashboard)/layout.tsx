@@ -1,6 +1,7 @@
-import NewTodoForm from '@/components/NewTodoForm'
+import NewTodoForm from "@/components/NewTodoForm";
+import { FC, PropsWithChildren } from "react";
 
-const DashboardLayout = ({ children }) => {
+const DashboardLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div>
       <div>
@@ -11,7 +12,7 @@ const DashboardLayout = ({ children }) => {
       </div>
       <div>{children}</div>
     </div>
-  )
-}
+  );
+};
 
-export default DashboardLayout
+export default DashboardLayout;
