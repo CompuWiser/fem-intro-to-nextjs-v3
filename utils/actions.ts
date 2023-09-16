@@ -1,9 +1,10 @@
 "use server";
+
 import db from "@/utils/db";
 import { revalidatePath } from "next/cache";
 
-export const newTodo = async (data: FormData) => {
-  const newTodo = data.get("todo") as string;
+export const newTodo = async (formData: FormData) => {
+  const newTodo = formData.get("todo") as string;
 
   if (newTodo) {
     await db.todo.create({
@@ -15,9 +16,9 @@ export const newTodo = async (data: FormData) => {
   }
 };
 
-export const completeTodo = async (id: string) => {
+export const completeTodo = async (todoId: string) => {
   await db.todo.update({
-    where: { id },
+    where: { id: todoId },
     data: {
       completed: true,
     },

@@ -1,9 +1,11 @@
 "use client";
 import { completeTodo } from "@/utils/actions";
 import type { Todo } from "@prisma/client";
-import { useTransition } from "react";
+import { FC, PropsWithoutRef, useTransition } from "react";
 
-const Todo = ({ todo }: { todo: Todo }) => {
+type TodoFC = FC<PropsWithoutRef<{ todo: Todo }>>;
+
+const Todo: TodoFC = ({ todo }) => {
   const [isPending, startTransition] = useTransition();
   return (
     <div

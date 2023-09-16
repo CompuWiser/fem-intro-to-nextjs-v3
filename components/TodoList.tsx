@@ -1,7 +1,10 @@
-import { Todo as TodoType } from "@prisma/client";
+import type { Todo as TodoType } from "@prisma/client";
+import type { FC, PropsWithoutRef } from "react";
 import Todo from "./Todo";
 
-const TodoList = ({ todos }: { todos: TodoType[] }) => {
+type TodoListFC = FC<PropsWithoutRef<{ todos: TodoType[] }>>;
+
+const TodoList: TodoListFC = ({ todos }) => {
   return (
     <div>
       {todos.map((todo) => (

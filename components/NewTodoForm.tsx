@@ -1,6 +1,7 @@
 import { newTodo } from "@/utils/actions";
+import type { FC } from "react";
 
-const NewTodoForm = () => {
+const NewTodoForm: FC = () => {
   return (
     <div>
       <form action={newTodo}>
